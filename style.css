@@ -1,6 +1,7 @@
-body {
-    font-size: 15pt;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+*{
+    font-family: 'Roboto Mono', monospace;
+  }
 .bar{
   background: dimgrey;
   border: solid 1px darkgrey;
@@ -8,7 +9,9 @@ body {
   height: 50px;
   padding: 10px;
 }
-
+button{
+    margin: 10px 0;
+}
 .value{
   content: "";
   display: block;
@@ -16,4 +19,3 @@ body {
   height: 100%;
   transition: .7s;
 }
-
