@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+*{
+    font-family: 'Roboto Mono', monospace;
+  }
+body{
+  height: 100vh;
+  background-color: rgb(209, 197, 197);
+}
+.container{
+  width: 70%;
+  margin: auto;
+  height: 100%;
+}
+.container .sideBar{
+  width: 25%;
+  height: 100%;
+}
+
+.sideBar .informationC{
+  width: 100%;
+}
+.informationC > span{
+  display: block;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+
+  width: calc(100% - 20px);
+}
+.informationC .information{
+  background-color: white;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 15px;
+}
+.information .stats{
+  margin: 10px 0;
+  width: 100%;
+  font-size: 14px;
+
+}
+.information span{
+  display: flex;
+  margin: 5px 0;
+
+}
+
+r{
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  outline-offset: 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50px;
+
+}
+.bar{
+  width: 100%;
+  height: 6px;
+  position: relative;
+  margin: 5px 0;
+}
+.bars .num{
+  font-size: 14px;
+}
+button{
+  margin: 10px 0;
+}
+.value{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: .7s;
+}
+
