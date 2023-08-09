@@ -1,0 +1,19 @@
+body {
+    font-size: 15pt;
+}
+.bar{
+  background: dimgrey;
+  border: solid 1px darkgrey;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+}
+
+.value{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .7s;
+}
+
