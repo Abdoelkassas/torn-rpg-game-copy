@@ -7,7 +7,7 @@ let spendNumNrv = 2;
 let nerveBar = document.querySelector(".nrv");
 let nrvNum = document.querySelector(".nrvNum");
 let spendEleNrv = document.querySelector(".nrvSpend");
-let nrvTime = 1000;
+let nrvTime = 3000;
 
 function main(thing, maxThing, bar, thingNum, sn, se, t, name) {
   // Helpers Functions
@@ -56,19 +56,19 @@ let energyBar = document.querySelector(".energy");
 let energyNum = document.querySelector(".energyNum");
 let spendEleEnergy = document.querySelector(".energySpend");
 let spendNumEnergy = 25;
-let energyTime = 2000;
+let energyTime = 3000;
 
 main(energy,maxEnergy,energyBar,energyNum,spendNumEnergy,spendEleEnergy,energyTime, "energy");
 
 
-
+//happiness system
 let happiness = 10;
 let maxhappiness = 300;
 let happinessBar = document.querySelector(".happiness");
 let happinessNum = document.querySelector(".happyNum");
 let spendElehappiness = document.querySelector(".happySpend");
 let spendNumhappiness = 15;
-let happinessTime = 2000;
+let happinessTime = 4500;
 
 main(happiness,maxhappiness,happinessBar,happinessNum,spendNumhappiness,spendElehappiness,happinessTime, "happiness");
 
