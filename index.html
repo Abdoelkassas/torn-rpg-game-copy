@@ -1,33 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>TORN | Copy</title>
-  
-  <link rel="stylesheet" href="style.css">
+  <title>TORN | Clone</title>
+
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body>
- <div class="nerveBar bar">
-  <div class="nrv value" data-color="orangered"></div>
- </div>
-<div class="nrvNum"></div>
-<button class="nrvSpend">spend Your Nerve</button>
+  <div class="container">
+    <div class="sideBar">
+      <div class="informationC">
+        <span>Inforamtion</span>
 
- <div class="energyBar bar">
-   <div class="energy value" data-color="rgb(28, 180, 28)"></div>
- </div>
- <div class="energyNum"></div>
- <button class="energySpend">spend Your Energy</button>
-  <!-- Project -->
-  <div class="happyBar bar">
-    <div class="happiness value" data-color="rgb(32, 32, 139)"></div>
+        <div class="information">
+          <div class="status">
+            test
+          </div>
+          <hr>
+          <div class="stats">
+
+            <span>
+              Name:
+              <div class="theName" style="color: rgb(70, 182, 182)">Abdo</div>
+            </span>
+            <span>
+              Money:
+              <div class="money" style="color:green">$200,000</div>
+            </span>
+            <span>
+              Level :
+              <div class="level">1</div>
+            </span>
+            <span>
+              Points:
+              <div class="points">0</div>
+            </span>
+            <span>
+              Refills:
+              <div class="points">4</div>
+            </span>
+          </div>
+          <hr>
+          <div class="bars">
+            <div class="energyNum num"></div>
+            <div class="energyBar bar">
+              <div class="energy value" data-color="rgb(28, 180, 28)"></div>
+              <r></r>
+
+            </div>
+            <div class="nrvNum num"></div>
+            <div class="nerveBar bar">
+              <div class="nrv value" data-color="orangered"></div>
+              <r></r>
+            </div>
+
+            <!-- Project -->
+            <div class="happyNum num"></div>
+            <div class="happyBar bar">
+              <div class="happiness value" data-color="rgb(189, 189, 54)"></div>
+              <r></r>
+
+            </div>
+            <div class="lifeNum num"></div>
+            <div class="lifeBar bar">
+              <div class="life value" data-color="blue"></div>
+              <r></r>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="content">
+
+      <button class="energySpend">spend Your Energy</button>
+      <button class="nrvSpend">spend Your Nerve</button>
+      <button class="happySpend">spend Your happiness</button>
+      <button class="lifeSpend">Hmmmm....</button>
+    </div>
+
   </div>
-  <div class="happyNum"></div>
-  <button class="happySpend">spend Your happiness</button>
+
   <script src="main.js"></script>
 </body>
+
 </html>
