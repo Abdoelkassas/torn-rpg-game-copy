@@ -7,7 +7,7 @@ let spendNumNrv = 2;
 let nerveBar = document.querySelector(".nrv");
 let nrvNum = document.querySelector(".nrvNum");
 let spendEleNrv = document.querySelector(".nrvSpend");
-let nrvTime = 3000;
+let nrvTime = 1000;
 
 function main(thing, maxThing, bar, thingNum, sn, se, t, name) {
   // Helpers Functions
@@ -30,8 +30,9 @@ function main(thing, maxThing, bar, thingNum, sn, se, t, name) {
   };
 
   function sec() {
-    thingNum.innerHTML = `${+thing} / ${maxThing} `;
-    bar.style.cssText = `width: ${(+thing / maxThing) * 100}%; background: ${bar.dataset.color}`;
+    thingNum.innerHTML = `${name}: ${+thing} / ${maxThing} `;
+    bar.style.cssText = `width: ${(+thing / maxThing) * 100}%; background: ${bar.dataset.color}; `;
+
   }
   sec();
 
@@ -56,7 +57,7 @@ let energyBar = document.querySelector(".energy");
 let energyNum = document.querySelector(".energyNum");
 let spendEleEnergy = document.querySelector(".energySpend");
 let spendNumEnergy = 25;
-let energyTime = 3000;
+let energyTime = 2000;
 
 main(energy,maxEnergy,energyBar,energyNum,spendNumEnergy,spendEleEnergy,energyTime, "energy");
 
@@ -68,8 +69,23 @@ let happinessBar = document.querySelector(".happiness");
 let happinessNum = document.querySelector(".happyNum");
 let spendElehappiness = document.querySelector(".happySpend");
 let spendNumhappiness = 15;
-let happinessTime = 4500;
+let happinessTime = 2000;
 
 main(happiness,maxhappiness,happinessBar,happinessNum,spendNumhappiness,spendElehappiness,happinessTime, "happiness");
 
 
+
+//life system
+let life = 10;
+let maxlife = 300;
+let lifeBar = document.querySelector(".life");
+let lifeNum = document.querySelector(".lifeNum");
+let spendElelife = document.querySelector(".lifeSpend");
+let spendNumlife = 15;
+let lifeTime = 30;
+
+main(life,maxlife,lifeBar,lifeNum,spendNumlife,spendElelife,lifeTime, "life");
+
+document.querySelectorAll("r").forEach((e) =>{
+  e.style = ` outline:solid 1px ${e.previousElementSibling.dataset.color}; `
+})
