@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 /* Start Global */
+:root{
+  --main-color:#698f16;
+  --secondry-color: #434343;
+}
 *{
   font-family: 'Roboto Mono', sans-serif;
 }
 body{
   height: 100vh;
-  background-color: rgb(209, 197, 197);
+  background-color: #1f1f1f;
 }
+.container{
+  width: 90%;
+  margin: auto;
 
+}
 /* End Global */
 
 
@@ -23,7 +31,7 @@ r{
   left: 50%;
   transform: translate(-50%,-50%);
   border-radius: 50px;
-
+  opacity: .7;
 }
 .bar{
   width: 100%;
@@ -38,7 +46,23 @@ r{
 button{
   margin: 10px 0;
 }
-
+.title{
+  display: block;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  width: calc(100% - 20px);
+  
+  
+}
+.active{
+  color: var(--main-color);
+  background-color: var(--main-color)!important;
+  
+  text-shadow:  0 0 5px var(--main-color), 0 0 10px var(--main-color), 0 0 15px var(--main-color), 0 0 20px var(--main-color), 0 0 25px var(--main-color), 0 0 60px var(--main-color), 0 0 70px var(--main-color);
+}
 .value{
   content: "";
   display: block;
@@ -51,45 +75,128 @@ button{
 
 /* End Components */
 
-/* Start Sidebar */
-.container{
-  width: 70%;
-  margin: auto;
-  height: 100%;
-}
+/* Start Content */
+
+  /* Start Sidebar */
+
 .container .sideBar{
-  width: 20%;
+  width: 200px;
   height: 100%;
 }
 .sideBar .informationC{
   width: 100%;
 }
-.informationC > span{
-  display: block;
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  width: calc(100% - 20px);
-}
+
 .informationC .information{
-  background-color: white;
+  background-color: #333333;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  padding: 15px;
+  padding: 10px;
+  color: white;
 }
 .informationC .information .stats{
   margin: 10px 0;
   width: 100%;
   font-size: 14px;
+  
 
 }
-.information .stats span{
+.information .stats span:not(span span){
   display: flex;
   margin: 5px 0;
+  
 
 }
+.information .stats span span{
+  width: 70px;
+  /* text-align: center; */
 
-/* End Sidebar */
+}
+.sideBar .account{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  border-radius: 5px;
+  margin: 2px 0;
+  overflow: hidden;
 
+}
+.sideBar .account div{
+  padding: 10px;
+  background-image: linear-gradient(to bottom , #ffffff9d -100% , var(--secondry-color) 100%);
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+.sideBar .account div:not(:last-child)::after{
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 1px;
+  height: 50%;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%,-50%);
+}
+.account div:hover{
+  color: var(--main-color);
+  text-shadow:  0 0 5px white, 0 0 20px var(--main-color), 0 0 30px var(--main-color), 0 0 40px var(--main-color), 0 0 50px var(--main-color), 0 0 60px var(--main-color), 0 0 70px var(--main-color);
+
+}
+  /* End Sidebar */
+
+
+
+.content{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.content .contain{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+  /* Start menu */
+.menu{
+  height: 100%;
+}
+.menu nav{
+  width: 100%;
+}
+.menu nav ul{
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 5px 0 0 0 ;
+}
+.menu nav ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondry-color);
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+ul li i{
+  color: white;
+}
+ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+  /* End menu */
+
+/* End Content */
