@@ -16,10 +16,11 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container content">
     <div class="sideBar">
       <div class="informationC">
-        <span>Inforamtion</span>
+
+        <span class="title">Inforamtion</span>
 
         <div class="information">
           <div class="status">
@@ -29,23 +30,23 @@
           <div class="stats">
 
             <span>
-              Name:
+              <span>Name</span> 
               <div class="theName" style="color: rgb(70, 182, 182)">Abdo</div>
             </span>
             <span>
-              Money:
-              <div class="money" style="color:green">$200,000</div>
+              <span>Money</span> 
+              <div class="money" style="color:var(--main-color)">$200,000</div>
             </span>
             <span>
-              Level :
+              <span>level</span> 
               <div class="level">1</div>
             </span>
             <span>
-              Points:
+              <span>Points</span> 
               <div class="points">0</div>
             </span>
             <span>
-              Refills:
+              <span>Refills</span> 
               <div class="points">4</div>
             </span>
           </div>
@@ -53,26 +54,26 @@
           <div class="bars">
             <div class="energyNum num"></div>
             <div class="energyBar bar">
-              <div class="energy value" data-color="rgb(28, 180, 28)"></div>
+              <div class="energy value" data-color="#5e9424"></div>
               <r></r>
 
             </div>
             <div class="nrvNum num"></div>
             <div class="nerveBar bar">
-              <div class="nrv value" data-color="orangered"></div>
+              <div class="nrv value" data-color="#c2612e"></div>
               <r></r>
             </div>
 
             <!-- Project -->
             <div class="happyNum num"></div>
             <div class="happyBar bar">
-              <div class="happiness value" data-color="rgb(189, 189, 54)"></div>
+              <div class="happiness value" data-color="#b4ab36"></div>
               <r></r>
 
             </div>
             <div class="lifeNum num"></div>
             <div class="lifeBar bar">
-              <div class="life value" data-color="blue"></div>
+  <div class="life value"  data-color="#5467d0"></div>
               <r></r>
 
             </div>
@@ -81,14 +82,44 @@
         </div>
 
       </div>
+      <div class="account">
+        <div class="mail"><i class="fa-solid fa-envelope"></i></div>
+        <div class="events"><i class="fa-solid fa-exclamation"></i></div>
+        <div class="awards"><i class="fa-solid fa-medal"></i></div>
+      </div>
+      <div class="menu">
+        <span class="title">Areas</span>
+        <nav>
+          <ul>
+            <li class="active"><i class="fa-solid fa-house"></i><a href="">Home</a></li>
+            <li><i class="fa-solid fa-toolbox"></i><a href="">Items</a></li>
+            <li><i class="fa-solid fa-mug-saucer"></i><a href="">Job</a></li>
+            <li><i class="fa-solid fa-dumbbell"></i><a href="">Gym</a></li>
+            <li><i class="fa-solid fa-key"></i><a href="">Properties</a></li>
+            <li><i class="fa-solid fa-graduation-cap"></i><a href="">Education</a></li>
+            <li><i class="fa-solid fa-fingerprint"></i><a href="">Crimes</a></li>
+            <li><i class="fa-solid fa-newspaper"></i><a href="">Newspaper</a></li>
+            <li><i class="fa-solid fa-handcuffs"></i><a href="">Jail</a></li>
+            <li><i class="fa-solid fa-suitcase-medical"></i><a href="">Hospital</a></li>
+            <li><i class="fa-solid fa-comments"></i><a href="">Forums</a></li>
+            <li><i class="fa-solid fa-trophy"></i><a href="">Hall of Fame</a></li>
+            <li><i class="fa-solid fa-hand-fist"></i><a href="">Faction</a></li>
 
+
+
+          </ul>
+        </nav>
+      </div>
     </div>
-    <div class="content">
 
+
+    <div class="contain">
+      <div class="spends">
       <button class="energySpend">spend Your Energy</button>
       <button class="nrvSpend">spend Your Nerve</button>
       <button class="happySpend">spend Your happiness</button>
       <button class="lifeSpend">Hmmmm....</button>
+    </div>
     </div>
 
   </div>
