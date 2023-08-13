@@ -46,7 +46,7 @@ function main(thing, maxThing, bar, thingNum, sn, se, t, name) {
 
 
 
-main(nerve,maxNerve,nerveBar,nrvNum,spendNumNrv,spendEleNrv,nrvTime, "nerve");
+main(nerve, maxNerve, nerveBar, nrvNum, spendNumNrv, spendEleNrv, nrvTime, "nerve");
 
 
 
@@ -59,10 +59,10 @@ let spendEleEnergy = document.querySelector(".energySpend");
 let spendNumEnergy = 25;
 let energyTime = 2000;
 
-main(energy,maxEnergy,energyBar,energyNum,spendNumEnergy,spendEleEnergy,energyTime, "energy");
+main(energy, maxEnergy, energyBar, energyNum, spendNumEnergy, spendEleEnergy, energyTime, "energy");
 
 
-//happiness system
+
 let happiness = 10;
 let maxhappiness = 300;
 let happinessBar = document.querySelector(".happiness");
@@ -71,7 +71,7 @@ let spendElehappiness = document.querySelector(".happySpend");
 let spendNumhappiness = 15;
 let happinessTime = 2000;
 
-main(happiness,maxhappiness,happinessBar,happinessNum,spendNumhappiness,spendElehappiness,happinessTime, "happiness");
+main(happiness, maxhappiness, happinessBar, happinessNum, spendNumhappiness, spendElehappiness, happinessTime, "happy");
 
 
 
@@ -84,8 +84,86 @@ let spendElelife = document.querySelector(".lifeSpend");
 let spendNumlife = 15;
 let lifeTime = 30;
 
-main(life,maxlife,lifeBar,lifeNum,spendNumlife,spendElelife,lifeTime, "life");
+main(life, maxlife, lifeBar, lifeNum, spendNumlife, spendElelife, lifeTime, "life");
 
-document.querySelectorAll("r").forEach((e) =>{
+
+
+document.querySelectorAll("r").forEach((e) => {
   e.style = ` outline:solid 1px ${e.previousElementSibling.dataset.color}; `
 })
+
+
+// selecting li from menu {localStorage}
+
+
+document.querySelectorAll(".menu nav ul li").forEach((e) => e.setAttribute("data-select", `${e.innerText}`))
+let selectedElement = document.querySelector(`[data-select="${localStorage.getItem("selected")}"]`);
+if (localStorage.getItem("selected")) {
+  selectedElement.classList.add("selected")
+}
+document.querySelectorAll(".menu nav ul li a").forEach((a) => {
+  a.setAttribute("href", `#${a.innerText}`)
+})
+document.querySelectorAll(".menu nav ul li").forEach((e) => {
+  e.onclick = function () {
+    document.querySelectorAll(".menu nav ul li").forEach((el) => {
+      el.classList.remove("selected");
+    })
+    localStorage.setItem("selected", `${event.currentTarget.dataset.select}`)
+    event.currentTarget.classList.add("selected")
+  }
+})
+
+
+// selecting from account
+
+document.querySelectorAll(".account div").forEach((e) => e.setAttribute("data-select", `${e.className}`))
+let selectedElementAC = document.querySelector(`[data-select="${localStorage.getItem("selectedAccount")}"]`);
+if (localStorage.getItem("selectedAccount")) {
+  selectedElementAC.classList.add("selectedAccount")
+}
+
+document.querySelectorAll(".account div").forEach((e) => {
+  e.onclick = function () {
+    document.querySelectorAll(".account div").forEach((el) => {
+      el.classList.remove("selectedAccount");
+    })
+    localStorage.setItem("selectedAccount", `${event.currentTarget.dataset.select}`)
+    event.currentTarget.classList.add("selectedAccount")
+  }
+})
+
+
+
+
+
+
+// responsive
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.querySelectorAll(".menu li a").forEach((e) => {
+      e.style = "opacity:0"
+      e.parentElement.style.cssText = "display: inline-flex; border-radius:10px;"
+    })
+
+
+  } else {
+    document.querySelectorAll(".menu li a").forEach((e) => {
+      e.style = ""
+      e.parentElement.style.cssText = ""
+    })
+  }
+}
+
+var x = window.matchMedia("(max-width: 991px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes 
+
+x.onchange = myFunction(x)
+
+
+
+
+
+
